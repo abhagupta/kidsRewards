@@ -9,3 +9,10 @@ Provides following API :
 - `POST /:id/:transactionType ` - Post a tansaction for kid with id = `id` and `transactionType` 
 -- example : `http://localhost:7000/Aditi/AllNightSleep`
 
+##To Run
+
+- Clone the repo, cd <project root>
+- `npm install`
+- `npm start`
+- localhost server will start at 7000
+
