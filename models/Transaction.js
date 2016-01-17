@@ -1,5 +1,4 @@
 let mongoose = require('mongoose')
-let bcrypt = require('bcrypt')
 let nodeify = require('bluebird-nodeify')
 
 let TransactionSchema = mongoose.Schema({

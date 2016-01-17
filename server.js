@@ -8,7 +8,6 @@ let LocalStrategy = require('passport-local').Strategy
 let nodeifyit = require('nodeifyit')
 let morgan = require('morgan')
 let flash = require('connect-flash')
-let bcrypt = require('bcrypt')
 
 let passportMiddleware = require('./middleware/passport')
 let routes =  require('./routes.js')
@@ -18,9 +17,9 @@ let User = require('./models/User.js')
 
 require('songbird')
 
-const SALT = bcrypt.genSaltSync(10)
 
-mongoose.connect('mongodb://127.0.0.1:27017/Rewards')
+
+//mongoose.connect('mongodb://127.0.0.1:27017/Rewards')
 
 
 let app = new express()
@@ -48,10 +47,7 @@ app.use(passport.session())
 app.use(flash())
 app.listen(PORT, () => console.log(`LISTENING @ http://127.0.0.1:${PORT}`))
 
-let user = {
-    email: 'foo@foo.com',
-    password: bcrypt.hashSync('asdf', SALT)
-}
+
 
 passportMiddleware(app)
 routes(app)
