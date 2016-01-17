@@ -1,8 +1,8 @@
 {
   "name": "rewards_services",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon --exec babel-node -- --stage 1 --optional strict -- index.js"
+    "start": "nodemon --exec babel-node -- --stage 1 --optional strict -- server.js"
   },
   "dependencies": {
     "bluebird-nodeify": "^1.0.0",
