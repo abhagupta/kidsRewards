@@ -13,7 +13,7 @@ module.exports = (app) => {
     let passport = app.passport
 
     app.get('/', function(req, res) {
-        res.render('index.ejs');
+        res.json("Get test sucessful")
     })
 
     app.get('/summary/:id?', then(async(req, res) =>{
